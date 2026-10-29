@@ -1,0 +1,54 @@
+# Dependencies and build output
+node_modules/
+dist/
+coverage/
+*.tgz
+*.zip
+
+# Local development and raw runtime data
+.tmp/
+tmp/
+.local/
+evidence/
+archive/
+review-sources/
+.workbuddy/
+.codex/
+.agents/
+.pytest_cache/
+__pycache__/
+*.pyc
+*.log
+*.jsonl
+*.sqlite*
+*.db
+*.db-*
+*.sock
+*.pid
+*.bak
+*.bak-*
+backups/
+
+# Private configuration / credentials
+.env
+.env.*
+!.env.example
+config.json
+settings.json
+settings.local.json
+credentials.json
+auth.json
+*-auth.json
+*token*.json
+*credential*.json
+*provider*.json
+!*.example.json
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Editor / OS state
+.DS_Store
+.idea/
+.vscode/

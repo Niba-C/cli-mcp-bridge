@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 3,
+  "mode": "personal",
+  "defaultBackend": "opencode",
+  "backends": {
+    "opencode": {
+      "adapter": "opencode-http",
+      "enabled": true,
+      "pinnedVersion": "1.18.32",
+      "executable": null,
+      "providerConfigFile": null,
+      "modelProfiles": {
+        "default": {
+          "providerID": "minimax",
+          "modelID": "MiniMax-M3.1-Flash"
+        }
+      }
+    }
+  },
+  "workspaces": [
+    {
+      "id": "demo",
+      "name": "示例工作区",
+      "root": "/absolute/path/to/disposable/project",
+      "profiles": [
+        "review"
+      ]
+    }
+  ],
+  "limits": {
+    "activeRuns": 1,
+    "queuedRuns": 20,
+    "queueTtlMs": 300000,
+    "runTimeoutMs": 900000,
+    "approvalTimeoutMs": 300000,
+    "waitTimeoutMs": 20000,
+    "promptMaxBytes": 65536,
+    "eventsPerRun": 10000,
+    "eventBytesPerRun": 10485760,
+    "artifactMaxBytes": 10485760,
+    "artifactBytesPerRun": 52428800,
+    "artifactBytesGlobal": 1073741824,
+    "textResultMaxChars": 16000,
+    "idleWorkerMs": 600000,
+    "retentionDays": 7
+  },
+  "transport": {
+    "stdio": true,
+    "http": {
+      "enabled": false,
+      "bind": "127.0.0.1"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 3,
+  "mode": "personal",
+  "defaultBackend": "qoder",
+  "backends": {
+    "qoder": {
+      "adapter": "qoder-sdk",
+      "enabled": true,
+      "pinnedVersion": "1.1.78",
+      "executable": "/absolute/path/to/qodercli",
+      "auth": {
+        "mode": "cli-login"
+      },
+      "models": {
+        "default": "YOUR_MODEL_ID",
+        "allowed": [
+          "YOUR_MODEL_ID"
+        ]
+      }
+    }
+  },
+  "workspaces": [
+    {
+      "id": "my-project",
+      "name": "My project",
+      "root": "/absolute/path/to/your/project",
+      "profiles": [
+        "review"
+      ]
+    }
+  ],
+  "limits": {
+    "activeRuns": 1
+  },
+  "transport": {
+    "stdio": true,
+    "http": {
+      "enabled": false,
+      "bind": "127.0.0.1"
+    }
+  }
+}

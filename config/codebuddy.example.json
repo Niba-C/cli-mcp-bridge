@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 3,
+  "mode": "personal",
+  "defaultBackend": "codebuddy",
+  "backends": {
+    "codebuddy": {
+      "adapter": "codebuddy-sdk",
+      "enabled": true,
+      "pinnedVersion": "2.173.0",
+      "executable": "/absolute/path/to/codebuddy",
+      "auth": {
+        "mode": "cli-login"
+      },
+      "models": {
+        "default": "YOUR_MODEL_ID",
+        "allowed": [
+          "YOUR_MODEL_ID"
+        ]
+      }
+    }
+  },
+  "workspaces": [
+    {
+      "id": "my-project",
+      "name": "My project",
+      "root": "/absolute/path/to/your/project",
+      "profiles": [
+        "review"
+      ]
+    }
+  ],
+  "limits": {
+    "activeRuns": 1
+  },
+  "transport": {
+    "stdio": true,
+    "http": {
+      "enabled": false,
+      "bind": "127.0.0.1"
+    }
+  }
+}
